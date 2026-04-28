@@ -77,6 +77,7 @@
     <style>
         /* ================================================
            GREAT TALK AFRICA – CONTACT PAGE STYLES
+           Version 2.0 – Premium. Conversion-Focused.
            ================================================ */
         
         * {
@@ -92,14 +93,15 @@
             --gold-dark: #A8863A;
             --gold-light: #D4B06A;
             --white: #FFFFFF;
-            --light-grey: #F5F7F9;
+            --light-grey: #F8F9FA;
+            --mid-grey: #E9ECEF;
             --dark-grey: #2E2E2E;
             --text-dark: #1A2A3A;
             --text-light: #5A6B7A;
             --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
-            --transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         body {
@@ -116,6 +118,25 @@
             padding: 0 32px;
         }
 
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
         /* Header & Navigation */
         header {
             background: var(--white);
@@ -123,8 +144,9 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #E2E8F0;
-            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
         }
 
         .navbar {
@@ -142,7 +164,7 @@
         }
 
         .logo-img {
-            height: 48px;
+            height: 65px;
             width: auto;
         }
 
@@ -152,10 +174,10 @@
         }
 
         .logo-name {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.3rem;
+            font-weight: 800;
             color: var(--navy);
-            letter-spacing: -0.3px;
+            letter-spacing: -0.5px;
         }
 
         .logo-accent {
@@ -163,9 +185,9 @@
         }
 
         .logo-tagline {
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             color: var(--text-light);
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
         }
 
         .nav-links {
@@ -178,13 +200,25 @@
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: var(--transition);
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
+        .nav-links a:hover {
             color: var(--gold);
+        }
+
+        .btn-outline-nav {
+            background: transparent;
+            border: 1.5px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 20px;
+            border-radius: 40px;
+        }
+
+        .btn-outline-nav:hover {
+            background: var(--gold);
+            color: var(--white);
         }
 
         .mobile-menu {
@@ -199,12 +233,12 @@
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 28px;
-            border-radius: 40px;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 0.95rem;
             transition: var(--transition);
             cursor: pointer;
             border: none;
@@ -212,37 +246,38 @@
 
         .btn-primary {
             background: var(--gold);
-            color: var(--white);
+            color: var(--navy);
         }
 
         .btn-primary:hover {
             background: var(--gold-dark);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(200, 162, 74, 0.3);
         }
 
         .btn-large {
-            padding: 14px 36px;
-            font-size: 1rem;
+            padding: 16px 40px;
+            font-size: 1.05rem;
         }
 
         /* Page Header */
         .page-header {
-            background: var(--navy);
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
             color: var(--white);
             padding: 160px 0 80px;
             text-align: center;
         }
 
         .page-header h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
+            font-size: 3rem;
             margin-bottom: 16px;
         }
 
         .page-header p {
-            opacity: 0.8;
+            opacity: 0.85;
             max-width: 600px;
             margin: 0 auto;
+            font-size: 1.1rem;
         }
 
         /* Contact Section */
@@ -265,16 +300,16 @@
 
         .contact-card {
             background: var(--white);
-            padding: 32px;
-            border-radius: 20px;
+            padding: 36px;
+            border-radius: 24px;
             text-align: center;
-            border: 1px solid #E2E8F0;
+            border: 1px solid var(--mid-grey);
             transition: var(--transition);
         }
 
         .contact-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-sm);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
 
         .contact-card i {
@@ -296,12 +331,13 @@
         .contact-form {
             background: var(--white);
             padding: 40px;
-            border-radius: 24px;
-            border: 1px solid #E2E8F0;
+            border-radius: 28px;
+            border: 1px solid var(--mid-grey);
+            box-shadow: var(--shadow-sm);
         }
 
         .contact-form h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 24px;
             color: var(--navy);
         }
@@ -309,7 +345,7 @@
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 14px 18px;
-            border: 1px solid #E2E8F0;
+            border: 1px solid var(--mid-grey);
             border-radius: 12px;
             margin-bottom: 18px;
             font-family: inherit;
@@ -328,15 +364,16 @@
             justify-content: center;
         }
 
-        /* CTA */
+        /* CTA Section */
         .cta {
             padding: 80px 0;
-            background: var(--navy);
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
             text-align: center;
             color: var(--white);
         }
 
         .cta h2 {
+            font-size: 2.2rem;
             margin-bottom: 16px;
         }
 
@@ -345,6 +382,7 @@
             background: var(--navy);
             color: var(--white);
             padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .footer-grid {
@@ -355,7 +393,7 @@
         }
 
         .footer-logo {
-            height: 40px;
+            height: 55px;
             width: auto;
             margin-bottom: 16px;
         }
@@ -363,13 +401,13 @@
         .footer-col p {
             opacity: 0.7;
             font-size: 0.85rem;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .footer-col h4 {
             color: var(--gold);
             font-size: 1rem;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .footer-links {
@@ -377,7 +415,7 @@
         }
 
         .footer-links li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .footer-links a {
@@ -405,9 +443,9 @@
             bottom: 30px;
             right: 30px;
             background: var(--gold);
-            color: var(--white);
-            width: 44px;
-            height: 44px;
+            color: var(--navy);
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -417,6 +455,7 @@
             visibility: hidden;
             transition: var(--transition);
             z-index: 99;
+            box-shadow: var(--shadow-md);
         }
 
         .back-to-top.visible {
@@ -429,7 +468,7 @@
             transform: translateY(-3px);
         }
 
-        /* Fade Up */
+        /* Animations */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
@@ -443,16 +482,10 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-            .page-header h1 {
-                font-size: 2rem;
-            }
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+            .container { padding: 0 20px; }
+            h1 { font-size: 2rem; }
+            .page-header h1 { font-size: 2rem; }
+            .navbar { flex-direction: column; align-items: flex-start; }
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -460,25 +493,13 @@
                 margin-top: 20px;
                 gap: 16px;
             }
-            .nav-links.active {
-                display: flex;
-            }
-            .mobile-menu {
-                display: block;
-                position: absolute;
-                top: 28px;
-                right: 20px;
-            }
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
+            .nav-links.active { display: flex; }
+            .mobile-menu { display: block; position: absolute; top: 28px; right: 20px; }
+            .contact-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 480px) {
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
+            .btn { width: 100%; justify-content: center; }
         }
     </style>
 </head>
@@ -497,7 +518,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html" class="active btn-outline-nav">Book a Call</a></li>
                 </ul>
                 <button class="mobile-menu"><i class="fas fa-bars"></i></button>
             </nav>
@@ -518,13 +539,13 @@
                     <div class="contact-info fade-up">
                         <div class="contact-card">
                             <i class="fas fa-map-marker-alt"></i>
-                            <h3>Location</h3>
+                            <h3>Our Location</h3>
                             <p>Nairobi, Kenya</p>
                             <p>Available for remote and on-site consultations</p>
                         </div>
                         <div class="contact-card">
                             <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
+                            <h3>Email Us</h3>
                             <p>hello@greattalkafrica.com</p>
                             <p>Response within 2 business hours</p>
                         </div>
@@ -546,7 +567,7 @@
 
         <section class="cta">
             <div class="container">
-                <h2>Let’s structure your communication.</h2>
+                <h2>Ready to structure your communication?</h2>
                 <a href="mailto:hello@greattalkafrica.com" class="btn btn-primary btn-large">Email us directly →</a>
             </div>
         </section>
@@ -557,7 +578,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="GTA-logo.png" alt="Great Talk Africa" class="footer-logo">
-                    <p>Structured communication operations for global business.</p>
+                    <p>Premium African call centre and executive communication partner for global businesses.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -566,6 +587,15 @@
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Customer Support</a></li>
+                        <li><a href="services.html">Executive Communication</a></li>
+                        <li><a href="services.html">CRM & Workflow</a></li>
+                        <li><a href="services.html">Back Office Operations</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
