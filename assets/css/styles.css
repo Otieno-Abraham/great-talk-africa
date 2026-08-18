@@ -291,6 +291,9 @@ p.dropcap .dc{ float:left; font-family:'Poppins',sans-serif; font-weight:800; fo
 .footer-brand{ max-width:320px; }
 .footer-brand .nav-brand{ margin-bottom:10px; }
 .footer-brand p{ font-size:13px; line-height:1.6; color:#9a9280; margin:0; }
+.footer-consulting{ margin-top:10px !important; }
+.footer-consulting a{ color:var(--orange); text-decoration:none; font-weight:600; }
+.footer-consulting a:hover{ text-decoration:underline; }
 .footer-cols{ display:flex; gap:48px; flex-wrap:wrap; }
 .footer-col h3{
   font-family:'Poppins',sans-serif; font-weight:700; font-size:11px; letter-spacing:1.4px; text-transform:uppercase;
