@@ -1,0 +1,12 @@
+{
+  "name": "Great Talk Africa",
+  "short_name": "Great Talk Africa",
+  "icons": [
+    { "src": "/assets/img/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/img/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#11131E",
+  "background_color": "#ECE0CC",
+  "display": "standalone",
+  "start_url": "/"
+}
